@@ -2,6 +2,7 @@ package com.todo.webApplication.todo.helloWorld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,16 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class helloWorld {
 	
-//	@RequestMapping(method=RequestMethod.GET,path="/hello")
-//	public String helloworld()
-//	{
-//		return "hello world application";
-//	}
+	@RequestMapping(method=RequestMethod.GET,path="/hello")
+	public String helloworldd()
+	{
+		return "hello world application";
+	}
 
 	@GetMapping(path="/")
 	public helloWorldBean helloworld()
 	{
 		return new helloWorldBean("hello world");
+	}
+	
+	@GetMapping(path="/hello/{name}")
+	public helloWorldBean helloMr(@PathVariable String name) {
+		return new helloWorldBean("hello mr "+name);
+		
 	}
 
 
