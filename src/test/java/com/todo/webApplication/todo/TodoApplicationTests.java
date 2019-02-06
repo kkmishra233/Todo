@@ -8,8 +8,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features="Feature")
+//@RunWith(Cucumber.class)
+//@CucumberOptions(features="Feature")
 public class TodoApplicationTests {
 
 	@Test
